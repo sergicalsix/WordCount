@@ -1,17 +1,31 @@
-file_path="inputFiles/"
+import streamlit as st
+from animation import *
+import time
 
-word_count, line_count = 0, -1  
-flag = True
-with open(file_path + "demo1.txt","r") as f:
-    while flag:
-        line = f.readline()
-        #print(a,len(a))
-        line_len =  len(line)
-        if line_len == 0:
-            flag=False
-        word_count += line_len-1 #-1は改行文字の削除
-        line_count += 1
+st.set_page_config(
+   page_title="単語カウント",
+   page_icon=":shark:",
+ )
+
+st.title("単語カウント")
+st.write('<style>h1 {color: green;}</style>', unsafe_allow_html=True)
+
+#st.image('img/icons/sch.png')
+
+user_option = st.sidebar.radio(
+    "属性を選択してください",
+    ('セールスドライバー','センター長')
+)
+
+
+st.markdown("""-----""")
+
+st.sidebar.markdown("""-----""")
+
+go = st.sidebar.checkbox('実行!!')
+
+if go == True :
+    st.info("hoge")
+
+    
         
-
-print("文字数:",word_count)
-print("行数:",line_count)
