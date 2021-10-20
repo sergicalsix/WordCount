@@ -14,7 +14,6 @@ st.write('<style>h1 {color: green;}</style>', unsafe_allow_html=True)
 
 user_option = st.sidebar.radio(
     "属性を選択してください",
-    ('セールスドライバー','センター長')
 )
 
 
