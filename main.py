@@ -1,5 +1,5 @@
 import streamlit as st
-from animation import *
+#from animation import *
 import time
 
 st.set_page_config(
@@ -12,9 +12,9 @@ st.write('<style>h1 {color: green;}</style>', unsafe_allow_html=True)
 
 #st.image('img/icons/sch.png')
 
-user_option = st.sidebar.radio(
-    "属性を選択してください",
-)
+#user_option = st.sidebar.radio(
+#    "属性を選択してください",
+#)
 
 
 st.markdown("""-----""")
